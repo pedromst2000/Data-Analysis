@@ -1,0 +1,24 @@
+# Python cache files
+__pycache__/
+*.py[cod]
+*.pyc
+*.pyo
+*.pyd
+.pyc
+
+# Python testing
+.pytest_cache/
+
+# Python egg info
+*.egg-info/
+
+# Distribution
+dist/
+build/
+
+# IDE and OS
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
