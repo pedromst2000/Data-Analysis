@@ -44,6 +44,8 @@ A collection of Python data analysis projects covering statistical computation, 
 
 Analyzes US Census data to answer specific socioeconomic questions across income, education, occupation, and country of origin.
 
+Data is sourced from the [Adult Census Income dataset](https://archive.ics.uci.edu/ml/datasets/Adult)!
+
 **Key Features:**
 
 - 🌍 Race distribution count across the full dataset
@@ -85,6 +87,37 @@ Computes mean, variance, standard deviation, max, min, and sum on a list of 9 nu
     'sum':                [axis_0_list, axis_1_list, flattened_value]
 }
 ```
+
+---
+
+### 3️⃣ Medical Data Visualizer
+
+<div align="center">
+
+**Cardiovascular Disease Risk Analysis & Data Visualization**
+
+[![Open in Colab](https://img.shields.io/badge/Open%20in-Colab-blue?logo=google-colab&style=flat-square)](https://colab.research.google.com/drive/1BNXvU_Oo1JyjWUWsbqBgWM_extGZxASv?usp=sharing)
+
+</div>
+
+Analyzes the [Kaggle Cardiovascular Disease dataset](https://www.kaggle.com/datasets/sulianova/cardiovascular-disease-dataset) (70,000 patients) to explore relationships between lifestyle factors, biomarkers, and cardiovascular disease risk through exploratory data analysis and statistical visualization.
+
+**Key Features:**
+
+- 📊 Categorical plot — count of categorical variables (active, smoke, alcohol, cholesterol, glucose, BMI) stratified by CVD status
+- 🔥 Correlation heatmap — Pearson correlation matrix with upper triangle masked for clarity
+- 📈 Feature correlation rankings — horizontal bar chart showing which features correlate strongest with CVD
+- 🎯 Age & BMI group analysis — CVD prevalence by age group and BMI category
+- 💉 Biomarker distributions — cholesterol and glucose normalization (binary: normal vs elevated)
+- 🧮 Feature engineering — BMI calculation from weight/height, categorical binning for age and BMI groups
+- ⚕️ Data cleaning — removes physiologically impossible values (e.g., DBP > SBP), outliers beyond 2.5–97.5 percentiles
+
+**Key Findings:**
+
+- ✅ Lifestyle factors (activity, smoking, alcohol) show ~0 correlation with CVD — **dataset is balanced 50/50 for ML**
+- ✅ Real risk drivers: systolic BP (r≈+0.4), cholesterol (r≈+0.3), age (r≈+0.2)
+- ✅ Overweight prevalence increases with age; BMI explains some CVD variation
+
 ---
 
 ## 🚀 Getting Started
@@ -112,8 +145,10 @@ python main.py
 > **⚠️ Note on `requirements.txt`:** Dependencies are pinned (e.g. `pandas==1.5.3`, `numpy==2.2.5`). If installation fails due to version conflicts, install direcrly with pip as shown below:
 >
 > ```bash
-> pip install pandas   # demographic-data-analyzer
-> pip install numpy    # mean-variance-standard-deviation-calculator
+> pip install pandas          # demographic-data-analyzer, medical-data-visualizer
+> pip install numpy           # mean-variance-standard-deviation-calculator
+> pip install matplotlib      # medical-data-visualizer
+> pip install seaborn         # medical-data-visualizer
 > ```
 
 ---
