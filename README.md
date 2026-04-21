@@ -122,6 +122,4 @@ python main.py
 
 ### [⬆️ Back to Top](#-data-analysis)
 
-**Made with ❤️ using Python, NumPy, and Jupyter**
-
 </div>
