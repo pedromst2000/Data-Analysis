@@ -3,10 +3,14 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import numpy as np
 import os
+import sys
 
-# Output directory for visualizations
-OUTPUT_DIR = "outputs"
-os.makedirs(OUTPUT_DIR, exist_ok=True)
+# Allow importing shared utilities from the repo root utils/ folder
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
+from utils.output_manager import get_output_dir
+
+
+OUTPUT_DIR = get_output_dir()
 
 # 1
 df = pd.read_csv("https://drive.google.com/uc?id=1RFsl2Yy7r95yC3g9pG0In13wl4hi56Pg")
@@ -54,7 +58,7 @@ def draw_cat_plot():
     # 7
     fig = sns.catplot(
         x="variable", y="total", hue="value", col="cardio", data=df_cat, kind="bar"
-    )  # creating the catplot with the grouped data in long format to show value counts of categorical features
+    )  # creating the catplot
 
     # 8
     fig = fig.figure
