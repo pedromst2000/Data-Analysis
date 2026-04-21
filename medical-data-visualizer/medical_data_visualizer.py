@@ -2,9 +2,14 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 import numpy as np
+import os
+
+# Output directory for visualizations
+OUTPUT_DIR = "outputs"
+os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 # 1
-df = pd.read_csv("../medical-data-visualizer/data/medical_examination.csv")
+df = pd.read_csv("https://drive.google.com/uc?id=1RFsl2Yy7r95yC3g9pG0In13wl4hi56Pg")
 print(df.head())  # debugging line to check the data loaded
 
 # 2
@@ -55,7 +60,7 @@ def draw_cat_plot():
     fig = fig.figure
 
     # 9
-    fig.savefig("catplot.png")
+    fig.savefig(os.path.join(OUTPUT_DIR, "catplot.png"))
     return fig
 
 
@@ -111,7 +116,7 @@ def draw_heat_map():
     )  # creating the heatmap with the correlation matrix and the mask
 
     # 16
-    fig.savefig("heatmap.png")  # saving the heatmap figure
+    fig.savefig(os.path.join(OUTPUT_DIR, "heatmap.png"))  # saving the heatmap figure
     return fig  # returning the figure
 
 
