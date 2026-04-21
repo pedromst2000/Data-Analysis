@@ -2,6 +2,7 @@ import unittest
 import mean_var_std
 
 
+# the test case
 class UnitTests(unittest.TestCase):
     def test_calculate(self):
         actual = mean_var_std.calculate([2,6,2,8,4,0,1,5,7])
