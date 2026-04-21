@@ -145,10 +145,10 @@ python main.py
 > **⚠️ Note on `requirements.txt`:** Dependencies are pinned (e.g. `pandas==1.5.3`, `numpy==2.2.5`). If installation fails due to version conflicts, install direcrly with pip as shown below:
 >
 > ```bash
-> pip install pandas          # demographic-data-analyzer, medical-data-visualizer
-> pip install numpy           # mean-variance-standard-deviation-calculator
-> pip install matplotlib      # medical-data-visualizer
-> pip install seaborn         # medical-data-visualizer
+> pip install pandas          
+> pip install numpy           
+> pip install matplotlib     
+> pip install seaborn       
 > ```
 
 ---
