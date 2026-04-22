@@ -1,71 +1,75 @@
+import os
+import sys
 import pandas as pd
 import matplotlib.pyplot as plt
 from scipy.stats import linregress
 
+# Allow importing utils from parent directory
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
+from utils.output_manager import get_output_dir
+
 
 def draw_plot():
+    # Close any previous figures to prevent artist stacking across calls
+    plt.close("all")
+
     # Read data from file
-    df = pd.read_csv("../sea-level-predictor/data/epa-sea-level.csv")
+    df = pd.read_csv("https://drive.google.com/uc?id=1-SV4j8lrJNHsMsRibwVHqqH9YJfBkSd4")
     print(df.head())
 
+    # Create a fresh figure and axes for every call
+    fig, ax = plt.subplots(figsize=(12, 6))
+
     # Create scatter plot
-    plt.scatter(
+    ax.scatter(
         x=df["Year"],
         y=df["CSIRO Adjusted Sea Level"],
         color="blue",
-        label="Data Points",
-        s=5,
+        label="Observed Data",
+        s=10,
     )
 
-    # Create first line of best fit
-    slope, intercept = linregress(x=df["Year"], y=df["CSIRO Adjusted Sea Level"])[
-        :2
-    ]  # slice to get slope and intercept because linregress returns a tuple
-    years_extended = pd.Series(
-        range(1880, 2051)
-    )  # create a series of years from 1880 to 2050
-    plt.plot(
+    # Create first line of best fit (full history 1880–2050)
+    slope, intercept = linregress(x=df["Year"], y=df["CSIRO Adjusted Sea Level"])[:2]
+    years_extended = pd.Series(range(1880, 2051))
+    ax.plot(
         years_extended,
         slope * years_extended + intercept,
         color="red",
-        label="Best Fit Line 1",
-    )  # plot the line of best fit
-    print(
-        f"slope: {slope}, intercept: {intercept}"
-    )  # print slope and intercept for debugging
+        label=f"Best Fit (1880–present)  {slope:.4f}\"/yr",
+        linewidth=2,
+    )
+    print(f"slope: {slope}, intercept: {intercept}")
 
-    # Create second line of best fit
-    df_recent = df[
-        df["Year"] >= 2000
-    ]  # filter the dataframe to only include years from 2000 onwards
+    # Create second line of best fit (2000–present)
+    df_recent = df[df["Year"] >= 2000]
     slope_recent, intercept_recent = linregress(
         x=df_recent["Year"], y=df_recent["CSIRO Adjusted Sea Level"]
-    )[
-        :2
-    ]  # get slope and intercept for the recent yearss
-    print(
-        f"slope: {slope_recent}, intercept: {intercept_recent}"
-    )  # print slope and intercept for debugging
+    )[:2]
+    print(f"slope: {slope_recent}, intercept: {intercept_recent}")
 
     years_recent = pd.Series(range(2000, 2051))
-    plt.plot(
+    ax.plot(
         years_recent,
         slope_recent * years_recent + intercept_recent,
         color="green",
-        label="Best Fit Line 2",
-    )  # plot the line of best fit for recent years
-    print(
-        f"slope: {slope_recent}, intercept: {intercept_recent}"
-    )  # print slope and intercept for debugging
+        label=f"Best Fit (2000–present)  {slope_recent:.4f}\"/yr",
+        linewidth=2,
+    )
+    print(f"slope: {slope_recent}, intercept: {intercept_recent}")
 
     # Add labels and title
-    plt.xlabel("Year")
-    plt.ylabel("Sea Level (inches)")
-    plt.title("Rise in Sea Level")
+    ax.set_xlabel("Year")
+    ax.set_ylabel("Sea Level (inches)")
+    ax.set_title("Rise in Sea Level")
+    ax.legend(loc="upper left")
 
-    # Save plot and return data for testing (DO NOT MODIFY)
-    plt.savefig("sea_level_plot.png")
-    return plt.gca()
+    # Save plot to outputs folder using shared utility
+    OUTPUT_DIR = get_output_dir()
+    fig.savefig(os.path.join(OUTPUT_DIR, "sea_level_plot.png"))
+
+    return ax
 
 
-draw_plot()
+if __name__ == "__main__":
+    draw_plot()
