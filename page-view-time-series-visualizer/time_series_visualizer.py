@@ -5,7 +5,7 @@ from pandas.plotting import register_matplotlib_converters
 import os
 import sys
 
-register_matplotlib_converters()
+register_matplotlib_converters()  # This is used to register the converters for the date and time data types in pandas. It is not necessary in the latest versions of pandas, but it is a good practice to include it for compatibility with older versions.
 
 # Allow importing shared utilities from the repo root utils/ folder
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
@@ -200,4 +200,3 @@ def draw_box_plot():
 draw_line_plot()
 draw_bar_plot()
 draw_box_plot()
-
