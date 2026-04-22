@@ -22,11 +22,11 @@
 
 A collection of **Python data analysis and visualization projects** demonstrating core data science techniques:
 
-- **Statistical computation** — matrix operations, descriptive statistics, linear regression
-- **Exploratory data analysis (EDA)** — trends, distributions, seasonality, correlations, forecasting
-- **Data visualization** — line charts, bar plots, box plots, heatmaps, scatter plots, time-series plots
-- **Data cleaning & preprocessing** — outlier removal, categorical encoding, feature engineering
-- **Predictive modeling** — trend analysis, extrapolation, linear regression forecasting
+- **Statistical computation** - matrix operations, descriptive statistics, linear regression
+- **Exploratory data analysis (EDA)** - trends, distributions, seasonality, correlations, forecasting
+- **Data visualization** - line charts, bar plots, box plots, heatmaps, scatter plots, time-series plots
+- **Data cleaning & preprocessing** - outlier removal, categorical encoding, feature engineering
+- **Predictive modeling** - trend analysis, extrapolation, linear regression forecasting
 
 **Jupyter Notebooks** (`.ipynb`) are included **locally inside each project folder** for interactive exploration with inline visualizations, and are also available on **Google Colab** for a cloud-based experience with no local setup required. **Python scripts** provide production-ready implementations with unit tests and command-line execution.
 
@@ -58,7 +58,7 @@ A collection of **Python data analysis and visualization projects** demonstratin
 
 </div>
 
-Analyzes demographic and income patterns from the [UCI Adult Census Income dataset](https://archive.ics.uci.edu/ml/datasets/Adult) — answering key questions on socioeconomic disparities, education premiums, and workforce demographics.
+Analyzes demographic and income patterns from the [UCI Adult Census Income dataset](https://archive.ics.uci.edu/ml/datasets/Adult) - answering key questions on socioeconomic disparities, education premiums, and workforce demographics.
 
 **Key Features:**
 
@@ -90,11 +90,11 @@ Analyzes demographic and income patterns from the [UCI Adult Census Income datas
 
 </div>
 
-Computes mean, variance, standard deviation, max, min, and sum on a list of 9 numbers reshaped into a 3×3 matrix — along columns, rows, and the flattened array.
+Computes mean, variance, standard deviation, max, min, and sum on a list of 9 numbers reshaped into a 3×3 matrix - along columns, rows, and the flattened array.
 
 **Key Features:**
 
-- :white_check_mark: Input validation — raises `ValueError` if input is not exactly 9 elements
+- :white_check_mark: Input validation - raises `ValueError` if input is not exactly 9 elements
 - :white_check_mark: Results computed along axis 0 (columns), axis 1 (rows), and flattened
 - :white_check_mark: Visualizations: heatmap + bar charts per statistical measure
 
@@ -127,18 +127,18 @@ Analyzes the [Kaggle Cardiovascular Disease dataset](https://www.kaggle.com/data
 
 **Key Features:**
 
-- :bar_chart: Categorical plot — count of categorical variables (active, smoke, alcohol, cholesterol, glucose, BMI) stratified by CVD status
-- :fire: Correlation heatmap — Pearson correlation matrix with upper triangle masked for clarity
-- :chart_with_upwards_trend: Feature correlation rankings — horizontal bar chart showing which features correlate strongest with CVD
-- :dart: Age & BMI group analysis — CVD prevalence by age group and BMI category
-- :syringe: Biomarker distributions — cholesterol and glucose normalization (binary: normal vs elevated)
-- :abacus: Feature engineering — BMI calculation from weight/height, categorical binning for age and BMI groups
-- :medical_symbol: Data cleaning — removes physiologically impossible values (e.g., DBP > SBP), outliers beyond 2.5–97.5 percentiles
+- :bar_chart: Categorical plot - count of categorical variables (active, smoke, alcohol, cholesterol, glucose, BMI) stratified by CVD status
+- :fire: Correlation heatmap - Pearson correlation matrix with upper triangle masked for clarity
+- :chart_with_upwards_trend: Feature correlation rankings - horizontal bar chart showing which features correlate strongest with CVD
+- :dart: Age & BMI group analysis - CVD prevalence by age group and BMI category
+- :syringe: Biomarker distributions - cholesterol and glucose normalization (binary: normal vs elevated)
+- :abacus: Feature engineering - BMI calculation from weight/height, categorical binning for age and BMI groups
+- :medical_symbol: Data cleaning - removes physiologically impossible values (e.g., DBP > SBP), outliers beyond 2.5–97.5 percentiles
 
 **Key Findings:**
 
-- :white_check_mark: **Balanced binary outcome:** 50/50 split between CVD/non-CVD — excellent for supervised learning without class resampling
-- :white_check_mark: **Lifestyle factors paradox:** Activity, smoking, alcohol show ~0 correlation with CVD — may indicate dataset bias or confounding variables
+- :white_check_mark: **Balanced binary outcome:** 50/50 split between CVD/non-CVD - excellent for supervised learning without class resampling
+- :white_check_mark: **Lifestyle factors paradox:** Activity, smoking, alcohol show ~0 correlation with CVD - may indicate dataset bias or confounding variables
 - :white_check_mark: **Real physiological drivers:** Systolic BP (r≈+0.4), cholesterol (r≈+0.3), age (r≈+0.2) are strongest CVD predictors
 - :white_check_mark: **Age-BMI interaction:** Overweight prevalence increases with age; BMI categories show age-dependent CVD risk
 - :white_check_mark: **Data quality:** Absence of impossible values (DBP > SBP); outliers removed conservatively (2.5–97.5 percentile)
@@ -160,7 +160,7 @@ Visualizes and analyzes **1,238 days** of freeCodeCamp.org forum page views — 
 **Key Features:**
 
 - :chart_with_upwards_trend: **Line plot:** Tracks daily page views with clear visibility of growth trajectory and spike events
-- :bar_chart: **Grouped bar chart:** Average monthly views by year — reveals seasonal patterns and year-over-year comparison
+- :bar_chart: **Grouped bar chart:** Average monthly views by year - reveals seasonal patterns and year-over-year comparison
 - :package: **Box plots:** Dual side-by-side plots showing year-wise trend (upward distribution shift) and month-wise seasonality (October–November peaks)
 - :repeat: **Rolling mean analysis:** 30-day centred rolling average isolates the long-term trend from daily noise
 - :clipboard: **Statistical outlier documentation:** Box plots display IQR-based outlier dots with full transparency on data quality
@@ -169,10 +169,10 @@ Visualizes and analyzes **1,238 days** of freeCodeCamp.org forum page views — 
 
 - :white_check_mark: **Explosive growth:** Forum traffic grew **~3.3× from 2016 to 2019** (mean daily views: ~30K → ~100K)
 - :white_check_mark: **Acceleration phase:** Clear growth acceleration begins in **late 2018** — detected via 30-day rolling mean inflection
-- :white_check_mark: **Academic seasonality:** January–February and October–November show consistently elevated activity; June–August show dips — suggests student/educator-driven traffic
-- :white_check_mark: **Improving consistency:** 2019 shows narrower gap between mean and max values — traffic became more stable, fewer extreme spikes relative to baseline
-- :white_check_mark: **Statistical outliers present:** Even after 2.5% quantile removal, box plots reveal IQR-based outliers — genuine exceptional traffic days, especially in peak months
-- :white_check_mark: **Partial-year caveat:** 2016 data begins in May (not January) — full-year comparison with 2017–2019 requires interpretation care
+- :white_check_mark: **Academic seasonality:** January–February and October–November show consistently elevated activity; June–August show dips - suggests student/educator-driven traffic
+- :white_check_mark: **Improving consistency:** 2019 shows narrower gap between mean and max values - traffic became more stable, fewer extreme spikes relative to baseline
+- :white_check_mark: **Statistical outliers present:** Even after 2.5% quantile removal, box plots reveal IQR-based outliers - genuine exceptional traffic days, especially in peak months
+- :white_check_mark: **Partial-year caveat:** 2016 data begins in May (not January) - full-year comparison with 2017–2019 requires interpretation care
 
 ---
 
@@ -186,21 +186,21 @@ Visualizes and analyzes **1,238 days** of freeCodeCamp.org forum page views — 
 
 </div>
 
-Analyzes **172 years** of global average sea level measurements (1880–present) from NOAA/CSIRO data — predicting sea level rise through 2050 using linear regression across two distinct time windows.
+Analyzes **172 years** of global average sea level measurements (1880–present) from NOAA/CSIRO data - predicting sea level rise through 2050 using linear regression across two distinct time windows.
 
 **Key Features:**
 
-- :bar_chart: **Scatter plot** — Visualizes historical sea level observations with clear temporal trends
-- :chart_with_upwards_trend: **Long-term regression (1880–present)** — Establishes baseline 140-year trend slope and projects through 2050
-- :rocket: **Recent trend regression (2000–present)** — Captures acceleration phase by fitting recent 20+ years separately, revealing steeper rise rate
-- :crystal_ball: **Dual forecasts** — Compares pessimistic (recent trend) vs. conservative (full history) scenarios for 2050 predictions
-- :triangular_ruler: **Statistical metrics** — Reports slope (inches/year) and y-intercept for both regression models
-- :dart: **Annotated visualization** — Line labels display slope values for easy interpretation
+- :bar_chart: **Scatter plot** - Visualizes historical sea level observations with clear temporal trends
+- :chart_with_upwards_trend: **Long-term regression (1880–present)** - Establishes baseline 140-year trend slope and projects through 2050
+- :rocket: **Recent trend regression (2000–present)** - Captures acceleration phase by fitting recent 20+ years separately, revealing steeper rise rate
+- :crystal_ball: **Dual forecasts** - Compares pessimistic (recent trend) vs. conservative (full history) scenarios for 2050 predictions
+- :triangular_ruler: **Statistical metrics** - Reports slope (inches/year) and y-intercept for both regression models
+- :dart: **Annotated visualization** - Line labels display slope values for easy interpretation
 
 **Key Findings:**
 
-- :white_check_mark: **Accelerating rise:** Recent sea level rise rate (~0.13 in/year) significantly exceeds long-term average (~0.06 in/year) — 2.2× acceleration detected
-- :white_check_mark: **2050 projections:** Conservative model predicts ~14.5 inches rise from 1880 baseline; recent-trend model projects ~20+ inches — wide range reflects climate uncertainty
+- :white_check_mark: **Accelerating rise:** Recent sea level rise rate (~0.13 in/year) significantly exceeds long-term average (~0.06 in/year) - 2.2× acceleration detected
+- :white_check_mark: **2050 projections:** Conservative model predicts ~14.5 inches rise from 1880 baseline; recent-trend model projects ~20+ inches - wide range reflects climate uncertainty
 - :white_check_mark: **Inflection point:** Acceleration becomes evident after year 2000, aligning with intensified climate change impacts
 - :white_check_mark: **Linear extrapolation limits:** Assumes constant rates; actual sea level rise may be nonlinear due to ice sheet collapse, thermal expansion acceleration
 - :white_check_mark: **Data quality:** CSIRO Adjusted Sea Level provides satellite-era continuity with pre-satellite tide gauge records
