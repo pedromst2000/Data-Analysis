@@ -14,6 +14,8 @@
   - :five: [Sea Level Predictor](#five-sea-level-predictor) [![Open in Colab](https://img.shields.io/badge/Open%20in-Colab-blue?logo=google-colab&style=flat-square)](https://colab.research.google.com/drive/1BuHFw4mfcI6Kly0gG6GbT7Fv9JFPF6i9?usp=sharing)
 - :rocket: [Getting Started](#rocket-getting-started)
 
+> **📌 Note:** Open the **Google Colab notebooks** for better experience, the repo contains only plain Python scripts.
+
 ---
 
 ## :dart: Overview
