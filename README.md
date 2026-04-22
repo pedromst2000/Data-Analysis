@@ -40,7 +40,7 @@ A collection of **Python data analysis and visualization projects** demonstratin
 | **Statistics**       | SciPy (linregress, pearsonr, stats)                     |
 | **Machine Learning** | scikit-learn (sklearn)                                  |
 | **Testing**          | Unit tests (unittest)                                   |
-| **Environment**      | Jupyter Notebook, Google Colab, IDEs (VS Code, PyCharm) |
+| **Environment**      | Jupyter Notebook, Google Colab, IDE (VS Code)           |
 
 ---
 
