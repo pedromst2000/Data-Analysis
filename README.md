@@ -4,10 +4,15 @@
 
 ## :clipboard: Table of Contents
 
-- :dart: [Overview](#-overview)
-- :hammer_and_wrench: [Tech Stack](#️-tech-stack)
-- :file_folder: [Projects](#-projects)
-- :rocket: [Getting Started](#-getting-started)
+- :dart: [Overview](#dart-overview)
+- :hammer_and_wrench: [Tech Stack](#hammer_and_wrench-tech-stack)
+- :file_folder: [Projects](#file_folder-projects)
+  - :one: [Demographic Data Analyzer](#one-demographic-data-analyzer) [![Open in Colab](https://img.shields.io/badge/Open%20in-Colab-blue?logo=google-colab&style=flat-square)](https://colab.research.google.com/drive/15xuljB270NIhQLyMZ5QuTt3NzKquTwVh?usp=sharing)
+  - :two: [Mean, Variance & Standard Deviation Calculator](#two-mean-variance--standard-deviation-calculator) [![Open in Colab](https://img.shields.io/badge/Open%20in-Colab-blue?logo=google-colab&style=flat-square)](https://colab.research.google.com/drive/1ooFNF91BcRPpAoUn5GG9XC2DP5pCbF2j?usp=sharing)
+  - :three: [Medical Data Visualizer](#three-medical-data-visualizer) [![Open in Colab](https://img.shields.io/badge/Open%20in-Colab-blue?logo=google-colab&style=flat-square)](https://colab.research.google.com/drive/1BNXvU_Oo1JyjWUWsbqBgWM_extGZxASv?usp=sharing)
+  - :four: [Page View Time Series Visualizer](#four-page-view-time-series-visualizer) [![Open in Colab](https://img.shields.io/badge/Open%20in-Colab-blue?logo=google-colab&style=flat-square)](https://colab.research.google.com/drive/1D3AmrdbC_KKsOqiYy0wchc4knCBAGyjK?usp=sharing)
+  - :five: [Sea Level Predictor](#five-sea-level-predictor) [![Open in Colab](https://img.shields.io/badge/Open%20in-Colab-blue?logo=google-colab&style=flat-square)](https://colab.research.google.com/drive/1BuHFw4mfcI6Kly0gG6GbT7Fv9JFPF6i9?usp=sharing)
+- :rocket: [Getting Started](#rocket-getting-started)
 
 ---
 
@@ -27,15 +32,15 @@ A collection of **Python data analysis and visualization projects** demonstratin
 
 ## :hammer_and_wrench: Tech Stack
 
-| Category          | Tools & Libraries                       |
-| ----------------- | --------------------------------------- |
-| **Language**      | Python 3.7+                             |
-| **Data Handling** | pandas, NumPy                           |
-| **Visualization** | Matplotlib, Seaborn, pandas.plotting    |
-| **Statistics**    | SciPy (linregress, pearsonr, stats)     |
-| **Regression**    | Linear regression, trend extrapolation  |
-| **Testing**       | Unit tests (unittest)                   |
-| **Environment**   | Jupyter Notebook, Google Colab, VS Code |
+| Category             | Tools & Libraries                                       |
+| -------------------- | ------------------------------------------------------- |
+| **Language**         | Python 3.7+                                             |
+| **Data Handling**    | pandas, NumPy                                           |
+| **Visualization**    | Matplotlib, Seaborn, pandas.plotting                    |
+| **Statistics**       | SciPy (linregress, pearsonr, stats)                     |
+| **Machine Learning** | scikit-learn (sklearn)                                  |
+| **Testing**          | Unit tests (unittest)                                   |
+| **Environment**      | Jupyter Notebook, Google Colab, IDEs (VS Code, PyCharm) |
 
 ---
 
@@ -57,10 +62,10 @@ Analyzes demographic and income patterns from the [UCI Adult Census Income datas
 
 - :globe_with_meridians: Race distribution count across the full dataset
 - :man: Average age of male respondents
-- :graduation_cap: Percentage of respondents with Bachelor's degree or higher
+- :books: Percentage of respondents with Bachelor's degree or higher
 - :moneybag: Income differential by education level (higher vs lower education)
 - :stopwatch: Minimum work hours + income rate for minimum-hour workers
-- :map: Country with highest high-earner proportion & top occupation for high earners from India
+- :earth_americas: Country with highest high-earner proportion & top occupation for high earners from India
 
 **Key Findings:**
 
@@ -224,9 +229,11 @@ python --version
    cd <project-folder>
    ```
 3. **Install dependencies:**
+
    ```bash
    pip install -r requirements.txt
    ```
+
    > **📌 Dependency Pinning:** `requirements.txt` files pin specific versions to ensure reproducibility across projects. If installation fails, install packages individually:
    >
    > ```bash
@@ -252,6 +259,6 @@ Output includes:
 
 <div align="center">
 
-[:arrow_up: Back to Top](#-data-analysis)
+[:arrow_up: Back to Top](#bar_chart-data-analysis)
 
 </div>
