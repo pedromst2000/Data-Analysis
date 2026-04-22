@@ -13,19 +13,25 @@
 
 ## 🎯 Overview
 
-A collection of Python data analysis projects covering statistical computation, demographic analysis, and data visualization.
+A collection of **Python data analysis and visualization projects** demonstrating core data science techniques:
 
-**Notebooks** are hosted in **Google Colab** for interactive exploration with inline visualizations. **Python scripts** contain the core logic for imports, testing, and running from the command line.
+- **Statistical computation** — matrix operations, descriptive statistics
+- **Exploratory data analysis (EDA)** — trends, distributions, seasonality, correlations
+- **Data visualization** — line charts, bar plots, box plots, heatmaps, scatter plots
+- **Data cleaning & preprocessing** — outlier removal, categorical encoding, feature engineering
+
+**Notebooks** are hosted in **Google Colab** for interactive exploration with inline visualizations. **Python scripts** provide production-ready implementations with unit tests and command-line execution.
 
 ---
 
 ## 🛠️ Tech Stack
 
-| Category          | Tools                                   |
+| Category          | Tools & Libraries                       |
 | ----------------- | --------------------------------------- |
-| **Language**      | Python 3.x                              |
-| **Data**          | NumPy, pandas                           |
-| **Visualization** | Matplotlib, Seaborn                     |
+| **Language**      | Python 3.7+                             |
+| **Data Handling** | pandas, NumPy                           |
+| **Visualization** | Matplotlib, Seaborn, pandas.plotting    |
+| **Testing**       | Unit tests (unittest)                   |
 | **Environment**   | Jupyter Notebook, Google Colab, VS Code |
 
 ---
@@ -42,18 +48,25 @@ A collection of Python data analysis projects covering statistical computation, 
 
 </div>
 
-Analyzes US Census data to answer specific socioeconomic questions across income, education, occupation, and country of origin.
-
-Data is sourced from the [Adult Census Income dataset](https://archive.ics.uci.edu/ml/datasets/Adult)!
+Analyzes demographic and income patterns from the [UCI Adult Census Income dataset](https://archive.ics.uci.edu/ml/datasets/Adult) — answering key questions on socioeconomic disparities, education premiums, and workforce demographics.
 
 **Key Features:**
 
 - 🌍 Race distribution count across the full dataset
 - 👨 Average age of male respondents
-- 🎓 Percentage of respondents holding a Bachelor's degree
-- 💰 % earning >50K split by education level (higher vs lower education)
-- ⏱️ Minimum weekly work hours + % of those minimum-hour workers earning >50K
-- 🗺️ Country with the highest proportion of >50K earners & top occupation for high earners in India
+- 🎓 Percentage of respondents with Bachelor's degree or higher
+- 💰 Income differential by education level (higher vs lower education)
+- ⏱️ Minimum work hours + income rate for minimum-hour workers
+- 🗺️ Country with highest high-earner proportion & top occupation for high earners from India
+
+**Key Findings:**
+
+- ✅ **Education premium:** Higher education respondents earn >50K at **~4.2× higher rate** than lower education
+- ✅ **Race skew:** Dataset heavily skewed toward White respondents (~27,000 of 32,561); Black and Asian populations underrepresented
+- ✅ **Class imbalance:** Only **~24% earn >50K** — binary outcome is imbalanced, important for classification models
+- ✅ **Age factor:** Average age of >50K earners is ~44 years; strong correlation with experience and seniority
+- ✅ **Gender patterns:** Male respondents average age ~40; female respondents average ~38 — consistent with historical workforce trends
+- ✅ **Geographic insight:** India ranks among top countries with >50K earners despite small sample size — likely selection bias (skilled professionals)
 
 ---
 
@@ -114,9 +127,42 @@ Analyzes the [Kaggle Cardiovascular Disease dataset](https://www.kaggle.com/data
 
 **Key Findings:**
 
-- ✅ Lifestyle factors (activity, smoking, alcohol) show ~0 correlation with CVD — **dataset is balanced 50/50 for ML**
-- ✅ Real risk drivers: systolic BP (r≈+0.4), cholesterol (r≈+0.3), age (r≈+0.2)
-- ✅ Overweight prevalence increases with age; BMI explains some CVD variation
+- ✅ **Balanced binary outcome:** 50/50 split between CVD/non-CVD — excellent for supervised learning without class resampling
+- ✅ **Lifestyle factors paradox:** Activity, smoking, alcohol show ~0 correlation with CVD — may indicate dataset bias or confounding variables
+- ✅ **Real physiological drivers:** Systolic BP (r≈+0.4), cholesterol (r≈+0.3), age (r≈+0.2) are strongest CVD predictors
+- ✅ **Age-BMI interaction:** Overweight prevalence increases with age; BMI categories show age-dependent CVD risk
+- ✅ **Data quality:** Absence of impossible values (DBP > SBP); outliers removed conservatively (2.5–97.5 percentile)
+
+---
+
+### 4️⃣ Page View Time Series Visualizer
+
+<div align="center">
+
+**freeCodeCamp Forum Daily Traffic Analysis (2016–2019)**
+
+[![Open in Colab](https://img.shields.io/badge/Open%20in-Colab-blue?logo=google-colab&style=flat-square)](https://colab.research.google.com/drive/1D3AmrdbC_KKsOqiYy0wchc4knCBAGyjK?usp=sharing)
+
+</div>
+
+Visualizes and analyzes **1,238 days** of freeCodeCamp.org forum page views — revealing growth trends, seasonal patterns, and distribution shifts across a 3.5-year period. Data is cleaned by removing the top/bottom **2.5%** of outliers.
+
+**Key Features:**
+
+- 📈 **Line plot:** Tracks daily page views with clear visibility of growth trajectory and spike events
+- 📊 **Grouped bar chart:** Average monthly views by year — reveals seasonal patterns and year-over-year comparison
+- 📦 **Box plots:** Dual side-by-side plots showing year-wise trend (upward distribution shift) and month-wise seasonality (October–November peaks)
+- 🔄 **Rolling mean analysis:** 30-day centred rolling average isolates the long-term trend from daily noise
+- 📋 **Statistical outlier documentation:** Box plots display IQR-based outlier dots with full transparency on data quality
+
+**Key Findings:**
+
+- ✅ **Explosive growth:** Forum traffic grew **~3.3× from 2016 to 2019** (mean daily views: ~30K → ~100K)
+- ✅ **Acceleration phase:** Clear growth acceleration begins in **late 2018** — detected via 30-day rolling mean inflection
+- ✅ **Academic seasonality:** January–February and October–November show consistently elevated activity; June–August show dips — suggests student/educator-driven traffic
+- ✅ **Improving consistency:** 2019 shows narrower gap between mean and max values — traffic became more stable, fewer extreme spikes relative to baseline
+- ✅ **Statistical outliers present:** Even after 2.5% quantile removal, box plots reveal IQR-based outliers — genuine exceptional traffic days, especially in peak months
+- ✅ **Partial-year caveat:** 2016 data begins in May (not January) — full-year comparison with 2017–2019 requires interpretation care
 
 ---
 
@@ -124,37 +170,52 @@ Analyzes the [Kaggle Cardiovascular Disease dataset](https://www.kaggle.com/data
 
 ### Prerequisites
 
-**Python 3.7+** is required:
+Ensure **Python 3.7 or later** is installed:
 
 ```bash
 python --version
 ```
 
-### Running the Projects
+### Installation
 
-Each project is self-contained. Navigate to its folder, install dependencies, then run `main.py`:
+1. **Clone this repository**
+
+   ```bash
+   git clone https://github.com/pedromst2000/Data-Analysis.git
+   cd Data-Analysis
+   ```
+
+2. **Navigate to a project folder:**
+   ```bash
+   cd <project-folder>
+   ```
+3. **Install dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+   > **📌 Dependency Pinning:** `requirements.txt` files pin specific versions (e.g., `pandas==1.5.3`, `numpy==2.2.5`). If installation fails, install packages individually:
+   >
+   > ```bash
+   > pip install pandas numpy matplotlib seaborn
+   > ```
+
+### Running Projects
+
+Each project is fully self-contained. Run the main script to execute the analysis and display unit test results:
 
 ```bash
-cd <project-folder>
-pip install -r requirements.txt
 python main.py
 ```
 
-`python main.py` prints both the **function output** and the **unit test results**.
+Output includes:
 
-> **⚠️ Note on `requirements.txt`:** Dependencies are pinned (e.g. `pandas==1.5.3`, `numpy==2.2.5`). If installation fails due to version conflicts, install direcrly with pip as shown below:
->
-> ```bash
-> pip install pandas          
-> pip install numpy           
-> pip install matplotlib     
-> pip install seaborn       
-> ```
+- ✅ Function results (statistics, aggregations, visualizations)
+- ✅ Unit test pass/fail status with detailed assertions
 
 ---
 
 <div align="center">
 
- [⬆️ Back to Top](#-data-analysis)
+[⬆️ Back to Top](#-data-analysis)
 
 </div>
