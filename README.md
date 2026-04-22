@@ -14,7 +14,7 @@
   - :five: [Sea Level Predictor](#five-sea-level-predictor) [![Open in Colab](https://img.shields.io/badge/Open%20in-Colab-blue?logo=google-colab&style=flat-square)](https://colab.research.google.com/drive/1BuHFw4mfcI6Kly0gG6GbT7Fv9JFPF6i9?usp=sharing)
 - :rocket: [Getting Started](#rocket-getting-started)
 
-> **📌 Note:** Open the **Google Colab notebooks** for better experience, the repo contains only plain Python scripts.
+> **📌 Note:** Each project includes a **Jupyter Notebook** (`.ipynb`) inside its folder for local interactive exploration, and is also available on **Google Colab** for a cloud-based experience, both options are fully supported!
 
 ---
 
@@ -28,7 +28,7 @@ A collection of **Python data analysis and visualization projects** demonstratin
 - **Data cleaning & preprocessing** — outlier removal, categorical encoding, feature engineering
 - **Predictive modeling** — trend analysis, extrapolation, linear regression forecasting
 
-**Notebooks** are hosted in **Google Colab** for interactive exploration with inline visualizations. **Python scripts** provide production-ready implementations with unit tests and command-line execution.
+**Jupyter Notebooks** (`.ipynb`) are included **locally inside each project folder** for interactive exploration with inline visualizations, and are also available on **Google Colab** for a cloud-based experience with no local setup required. **Python scripts** provide production-ready implementations with unit tests and command-line execution.
 
 ---
 
@@ -246,6 +246,8 @@ python --version
 
 ### Running Projects
 
+#### Option A — Python Script
+
 Each project is fully self-contained. Run the main script to execute the analysis and display unit test results:
 
 ```bash
@@ -256,6 +258,22 @@ Output includes:
 
 - ✅ Function results (statistics, aggregations, visualizations)
 - ✅ Unit test pass/fail status with detailed assertions
+
+#### Option B — Jupyter Notebook (Local)
+
+Each project folder contains a `.ipynb` notebook for interactive, cell-by-cell exploration. Open it with Jupyter:
+
+```bash
+jupyter notebook <notebook-name>.ipynb
+```
+
+Or simply open the `.ipynb` file directly in **VS Code** (with the Jupyter extension installed).
+
+> **📌 Note:** If Jupyter is not installed, run `pip install notebook` first.
+
+#### Option C — Google Colab (Cloud)
+
+Click any **Open in Colab** badge at the top of each project section to launch the notebook instantly in your browser — no local setup required.
 
 ---
 
