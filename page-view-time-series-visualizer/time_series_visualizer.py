@@ -2,11 +2,20 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import seaborn as sns
 from pandas.plotting import register_matplotlib_converters
+import os
+import sys
 
-register_matplotlib_converters()  # This is used to register the converters for the date and time data types in pandas. It is not necessary in the latest versions of pandas, but it is a good practice to include it for compatibility with older versions.
+register_matplotlib_converters()
+
+# Allow importing shared utilities from the repo root utils/ folder
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
+from utils.output_manager import get_output_dir
+
+# Output directory for visualizations
+OUTPUT_DIR = get_output_dir()
 
 df = pd.read_csv(
-    "../page-view-time-series-visualizer/data/fcc-forum-pageviews.csv",
+    "https://drive.google.com/uc?id=1dXBiSpARlI29gknbo2iC6YLM8_uBPs2N",
     parse_dates=["date"],  # This is used to parse the date column in the csv file
     index_col="date",
 )
@@ -32,7 +41,7 @@ def draw_line_plot():
 
     fig = plt.gcf()  # get current figure its used to save the figure
     # Save image and return fig (don't change this part)
-    fig.savefig("line_plot.png")
+    fig.savefig(os.path.join(OUTPUT_DIR, "line_plot.png"))
     return fig
 
 
@@ -106,7 +115,7 @@ def draw_bar_plot():
     plt.gca().set_facecolor("#F0F0F0")
 
     fig = plt.gcf()
-    fig.savefig("bar_plot.png")
+    fig.savefig(os.path.join(OUTPUT_DIR, "bar_plot.png"))
     return fig
 
 
@@ -184,10 +193,11 @@ def draw_box_plot():
     axes[1].tick_params(axis="x", rotation=45)
 
     plt.tight_layout()
-    fig.savefig("box_plot.png")
+    fig.savefig(os.path.join(OUTPUT_DIR, "box_plot.png"))
     return fig
 
 
 draw_line_plot()
 draw_bar_plot()
 draw_box_plot()
+
