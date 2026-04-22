@@ -246,7 +246,7 @@ python --version
 
 ### Running Projects
 
-#### Option A — Python Script
+#### Option A - Python Script
 
 Each project is fully self-contained. Run the main script to execute the analysis and display unit test results:
 
@@ -259,7 +259,7 @@ Output includes:
 - ✅ Function results (statistics, aggregations, visualizations)
 - ✅ Unit test pass/fail status with detailed assertions
 
-#### Option B — Jupyter Notebook (Local)
+#### Option B - Jupyter Notebook (Local)
 
 Each project folder contains a `.ipynb` notebook for interactive, cell-by-cell exploration. Open it with Jupyter:
 
@@ -271,7 +271,7 @@ Or simply open the `.ipynb` file directly in **VS Code** (with the Jupyter exten
 
 > **📌 Note:** If Jupyter is not installed, run `pip install notebook` first.
 
-#### Option C — Google Colab (Cloud)
+#### Option C - Google Colab (Cloud)
 
 Click any **Open in Colab** badge at the top of each project section to launch the notebook instantly in your browser — no local setup required.
 
