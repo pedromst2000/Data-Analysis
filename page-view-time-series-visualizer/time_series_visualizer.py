@@ -1,3 +1,16 @@
+"""
+freeCodeCamp Certification Project - Page View Time Series Visualizer
+Boilerplate: https://github.com/freeCodeCamp/boilerplate-page-view-time-series-visualizer/
+
+This script implements `draw_line_plot()`, `draw_bar_plot()`, and `draw_box_plot()` as
+required by the freeCodeCamp certification unit tests in `test_module.py`, using daily
+freeCodeCamp.org forum page view data (May 2016 - December 2019). Data is cleaned by
+removing the top/bottom 2.5% of values before plotting.
+
+The Jupyter Notebook goes well beyond just passing the tests - driven by curiosity to
+explore the time series further with 30-day rolling mean analysis, seasonality
+decomposition, year-over-year growth rate calculations, and richer annotated visualizations.
+"""
 import matplotlib.pyplot as plt
 import pandas as pd
 import seaborn as sns

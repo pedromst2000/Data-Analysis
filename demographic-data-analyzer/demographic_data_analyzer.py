@@ -1,3 +1,17 @@
+"""
+freeCodeCamp Certification Project - Demographic Data Analyzer
+Boilerplate: https://github.com/freeCodeCamp/boilerplate-demographic-data-analyzer/
+
+This script implements `calculate_demographic_data()` to answer the specific demographic
+questions required by the freeCodeCamp certification unit tests in `test_module.py`,
+using the UCI Adult Census Income dataset. Questions answered: race distribution, average
+male age, education levels, income by education, minimum work hours, and top
+high-earning countries/occupations.
+
+The Jupyter Notebook (`demographic_data_analyzer.ipynb`) goes well beyond just passing
+the tests - driven by curiosity to explore the dataset more deeply with distribution
+plots, cross-tabulations, income inequality analysis, and richer visual storytelling.
+"""
 import pandas as pd
 
 

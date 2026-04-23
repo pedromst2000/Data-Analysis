@@ -1,3 +1,18 @@
+"""
+freeCodeCamp Certification Project - Medical Data Visualizer
+Boilerplate: https://github.com/freeCodeCamp/boilerplate-medical-data-visualizer/
+
+This script implements `draw_cat_plot()` and `draw_heat_map()` exactly as specified by
+the freeCodeCamp certification unit tests in `test_module.py`, using the Kaggle
+Cardiovascular Disease dataset (70,000 patients). The categorical plot counts
+lifestyle/biomarker variables stratified by CVD status; the heatmap displays the
+Pearson correlation matrix with the upper triangle masked.
+
+The Jupyter Notebook (`medical_data_visualizer.ipynb`) goes well beyond just passing
+the tests - driven by curiosity to explore the dataset further with feature engineering
+(BMI groups, age bins), biomarker distribution analysis, CVD prevalence breakdowns,
+and additional correlation ranking charts.
+"""
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt

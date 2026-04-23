@@ -1,3 +1,16 @@
+"""
+freeCodeCamp Certification Project - Mean, Variance & Standard Deviation Calculator
+Boilerplate: https://github.com/freeCodeCamp/boilerplate-mean-variance-standard-deviation-calculator/
+
+This script implements the `calculate()` function that satisfies the exact unit test
+cases defined in `test_module.py` for the freeCodeCamp certification. It reshapes a
+9-element list into a 3×3 NumPy matrix and computes mean, variance, standard deviation,
+max, min, and sum along columns (axis 0), rows (axis 1), and the flattened array.
+
+The Jupyter Notebook (`mean_var_std.ipynb`) goes beyond passing the tests - driven by
+curiosity to explore the computations further with interactive heatmap and bar chart
+visualizations for each statistical measure.
+"""
 import numpy as np
 
 

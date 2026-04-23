@@ -1,3 +1,16 @@
+"""
+freeCodeCamp Certification Project - Sea Level Predictor
+Boilerplate: https://github.com/freeCodeCamp/boilerplate-sea-level-predictor/
+
+This script implements `draw_plot()` with two linear regression lines - one fitted on
+the full historical record (1880-2050) and one on the recent acceleration period
+(2000-2050) - as required by the freeCodeCamp certification unit tests in `test_module.py`,
+using NOAA/CSIRO global sea level data.
+
+The Jupyter Notebook (`sea_level_predictor.ipynb`) goes well beyond just passing the
+tests - driven by curiosity to explore the data further with detailed slope/intercept
+metrics, dual-forecast comparison, and acceleration detection analysis.
+"""
 import os
 import sys
 import pandas as pd
