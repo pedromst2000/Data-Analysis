@@ -7,14 +7,15 @@
 - :dart: [Overview](#dart-overview)
 - :hammer_and_wrench: [Tech Stack](#hammer_and_wrench-tech-stack)
 - :file_folder: [Projects](#file_folder-projects)
-  - :one: [Demographic Data Analyzer](#one-demographic-data-analyzer) [![Open in Colab](https://img.shields.io/badge/Open%20in-Colab-blue?logo=google-colab&style=flat-square)](https://colab.research.google.com/drive/15xuljB270NIhQLyMZ5QuTt3NzKquTwVh?usp=sharing)
-  - :two: [Mean, Variance & Standard Deviation Calculator](#two-mean-variance--standard-deviation-calculator) [![Open in Colab](https://img.shields.io/badge/Open%20in-Colab-blue?logo=google-colab&style=flat-square)](https://colab.research.google.com/drive/1ooFNF91BcRPpAoUn5GG9XC2DP5pCbF2j?usp=sharing)
-  - :three: [Medical Data Visualizer](#three-medical-data-visualizer) [![Open in Colab](https://img.shields.io/badge/Open%20in-Colab-blue?logo=google-colab&style=flat-square)](https://colab.research.google.com/drive/1BNXvU_Oo1JyjWUWsbqBgWM_extGZxASv?usp=sharing)
-  - :four: [Page View Time Series Visualizer](#four-page-view-time-series-visualizer) [![Open in Colab](https://img.shields.io/badge/Open%20in-Colab-blue?logo=google-colab&style=flat-square)](https://colab.research.google.com/drive/1D3AmrdbC_KKsOqiYy0wchc4knCBAGyjK?usp=sharing)
-  - :five: [Sea Level Predictor](#five-sea-level-predictor) [![Open in Colab](https://img.shields.io/badge/Open%20in-Colab-blue?logo=google-colab&style=flat-square)](https://colab.research.google.com/drive/1BuHFw4mfcI6Kly0gG6GbT7Fv9JFPF6i9?usp=sharing)
+  - :one: [Demographic Data Analyzer](#one-demographic-data-analyzer)
+  - :two: [Mean, Variance & Standard Deviation Calculator](#two-mean-variance--standard-deviation-calculator)
+  - :three: [Medical Data Visualizer](#three-medical-data-visualizer)
+  - :four: [Page View Time Series Visualizer](#four-page-view-time-series-visualizer)
+  - :five: [Sea Level Predictor](#five-sea-level-predictor)
 - :rocket: [Getting Started](#rocket-getting-started)
+- :heart: [Credits & Attribution](#heart-credits--attribution)
 
-> **📌 Note:** Each project includes a **Jupyter Notebook** (`.ipynb`) inside its folder for local interactive exploration, and is also available on **Google Colab** for a cloud-based experience, both options are fully supported!
+> **📌 Note:** Each project includes a **Jupyter Notebook** (`.ipynb`) for local interactive exploration and is also available on **Google Colab** - no local setup required.
 
 ---
 
@@ -28,21 +29,24 @@ A collection of **Python data analysis and visualization projects** demonstratin
 - **Data cleaning & preprocessing** - outlier removal, categorical encoding, feature engineering
 - **Predictive modeling** - trend analysis, extrapolation, linear regression forecasting
 
-**Jupyter Notebooks** (`.ipynb`) are included **locally inside each project folder** for interactive exploration with inline visualizations, and are also available on **Google Colab** for a cloud-based experience with no local setup required. **Python scripts** provide production-ready implementations with unit tests and command-line execution.
+**Two complementary implementations exist for each project:**
+
+- **Python scripts** (`.py`) — implement the exact logic required to pass the **freeCodeCamp certification unit tests** defined in each project's `test_module.py`. They are scoped precisely to the certification requirements and serve as the executable entry point via `main.py`.
+- **Jupyter Notebooks** (`.ipynb`) — go significantly further than the certification scope, combining the required logic with **extended exploratory data analysis (EDA)**, additional visualizations (heatmaps, rolling averages, distribution plots, correlation rankings), and deeper dataset research. Available both **locally** and on **Google Colab** for a cloud-based experience with no local setup required.
 
 ---
 
 ## :hammer_and_wrench: Tech Stack
 
-| Category             | Tools & Libraries                                       |
-| -------------------- | ------------------------------------------------------- |
-| **Language**         | Python 3.7+                                             |
-| **Data Handling**    | pandas, NumPy                                           |
-| **Visualization**    | Matplotlib, Seaborn, pandas.plotting                    |
-| **Statistics**       | SciPy (linregress, pearsonr, stats)                     |
-| **Machine Learning** | scikit-learn (sklearn)                                  |
-| **Testing**          | Unit tests (unittest)                                   |
-| **Environment**      | Jupyter Notebook, Google Colab, IDE (VS Code)           |
+| Category             | Tools & Libraries                             |
+| -------------------- | --------------------------------------------- |
+| **Language**         | Python 3.7+                                   |
+| **Data Handling**    | pandas, NumPy                                 |
+| **Visualization**    | Matplotlib, Seaborn, pandas.plotting          |
+| **Statistics**       | SciPy (linregress, pearsonr, stats)           |
+| **Machine Learning** | scikit-learn (sklearn)                        |
+| **Testing**          | Unit tests (unittest)                         |
+| **Environment**      | Jupyter Notebook, Google Colab, IDE (VS Code) |
 
 ---
 
@@ -73,10 +77,10 @@ Analyzes demographic and income patterns from the [UCI Adult Census Income datas
 
 - :white_check_mark: **Education premium:** Higher education respondents earn >50K at **~4.2× higher rate** than lower education
 - :white_check_mark: **Race skew:** Dataset heavily skewed toward White respondents (~27,000 of 32,561); Black and Asian populations underrepresented
-- :white_check_mark: **Class imbalance:** Only **~24% earn >50K** — binary outcome is imbalanced, important for classification models
+- :white_check_mark: **Class imbalance:** Only **~24% earn >50K** - binary outcome is imbalanced, important for classification models
 - :white_check_mark: **Age factor:** Average age of >50K earners is ~44 years; strong correlation with experience and seniority
-- :white_check_mark: **Gender patterns:** Male respondents average age ~40; female respondents average ~38 — consistent with historical workforce trends
-- :white_check_mark: **Geographic insight:** India ranks among top countries with >50K earners despite small sample size — likely selection bias (skilled professionals)
+- :white_check_mark: **Gender patterns:** Male respondents average age ~40; female respondents average ~38 - consistent with historical workforce trends
+- :white_check_mark: **Geographic insight:** India ranks among top countries with >50K earners despite small sample size - likely selection bias (skilled professionals)
 
 ---
 
@@ -155,7 +159,7 @@ Analyzes the [Kaggle Cardiovascular Disease dataset](https://www.kaggle.com/data
 
 </div>
 
-Visualizes and analyzes **1,238 days** of freeCodeCamp.org forum page views — revealing growth trends, seasonal patterns, and distribution shifts across a 3.5-year period. Data is cleaned by removing the top/bottom **2.5%** of outliers.
+Visualizes and analyzes **1,238 days** of freeCodeCamp.org forum page views - revealing growth trends, seasonal patterns, and distribution shifts across a 3.5-year period. Data is cleaned by removing the top/bottom **2.5%** of outliers.
 
 **Key Features:**
 
@@ -168,7 +172,7 @@ Visualizes and analyzes **1,238 days** of freeCodeCamp.org forum page views — 
 **Key Findings:**
 
 - :white_check_mark: **Explosive growth:** Forum traffic grew **~3.3× from 2016 to 2019** (mean daily views: ~30K → ~100K)
-- :white_check_mark: **Acceleration phase:** Clear growth acceleration begins in **late 2018** — detected via 30-day rolling mean inflection
+- :white_check_mark: **Acceleration phase:** Clear growth acceleration begins in **late 2018** - detected via 30-day rolling mean inflection
 - :white_check_mark: **Academic seasonality:** January–February and October–November show consistently elevated activity; June–August show dips - suggests student/educator-driven traffic
 - :white_check_mark: **Improving consistency:** 2019 shows narrower gap between mean and max values - traffic became more stable, fewer extreme spikes relative to baseline
 - :white_check_mark: **Statistical outliers present:** Even after 2.5% quantile removal, box plots reveal IQR-based outliers - genuine exceptional traffic days, especially in peak months
@@ -186,7 +190,7 @@ Visualizes and analyzes **1,238 days** of freeCodeCamp.org forum page views — 
 
 </div>
 
-Analyzes **172 years** of global average sea level measurements (1880–present) from NOAA/CSIRO data - predicting sea level rise through 2050 using linear regression across two distinct time windows.
+Analyzes **172 years** of global average sea level measurements (1880–present) from [NOAA/CSIRO](https://datahub.io/core/sea-level-rise) data - predicting sea level rise through 2050 using linear regression across two distinct time windows.
 
 **Key Features:**
 
@@ -273,7 +277,23 @@ Or simply open the `.ipynb` file directly in **VS Code** (with the Jupyter exten
 
 #### Option C - Google Colab (Cloud)
 
-Click any **Open in Colab** badge at the top of each project section to launch the notebook instantly in your browser — no local setup required.
+---
+
+## :heart: Credits & Attribution
+
+<div align="center">
+
+![freeCodeCamp Logo](assets/freeCodeCamp.png)
+
+</div>
+
+**© Built with [freeCodeCamp](https://www.freecodecamp.org/)**
+
+These projects are derived from the [freeCodeCamp Data Analysis with Python certification](https://www.freecodecamp.org/learn/data-analysis-with-python/), leveraging their official boilerplate templates as starting foundations. All solutions have been extended with deeper exploratory data analysis, advanced visualization techniques, and statistical insights beyond certification requirements.
+
+**Certification Earned:** [Data Analysis with Python - v7](https://www.freecodecamp.org/certification/pedromst2000/data-analysis-with-python-v7)
+
+Full credit and attribution go to the freeCodeCamp open-source community for the curriculum and boilerplate designs.
 
 ---
 
